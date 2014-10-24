@@ -1,0 +1,42 @@
+set encoding=utf-8
+"处理菜单及右键菜单乱码 
+language messages zh_CN.utf-8
+source $VIMRUNTIME/delmenu.vim 
+source $VIMRUNTIME/menu.vim 
+
+set go=
+set nobackup
+
+"不启用jedi的自动补全
+"let g:jedi#completions_enabled = 0
+
+"补全的时候不显示文档字符串，碍眼
+autocmd FileType python setlocal completeopt-=preview
+
+"点号的时候不自动选择
+let g:jedi#popup_on_dot = 0
+
+let g:neocomplcache_min_syntax_length = 2
+
+"用pylint检查python
+let g:syntastic_python_checkers = ['pylint']
+
+let g:syntastic_check_on_open = 1
+
+"不启用拼写检查
+set nospell
+if has("gui_running")
+    " set guioptions-=m  " remove menu bar
+    colorscheme monokai
+    "字体大小
+    set guifont=Consolas:h12
+    
+    set guioptions-=T  " remove toolbar
+    set guioptions-=r  " remove right-hand scroll bar
+    set guioptions-=l  " remove left-hand scroll bar
+    set guioptions-=L  " remove left-hand scroll bar even if there is a vertical split
+    set guioptions-=b  " remove bottom scroll bar
+endif
+
+UnBundle 'Shougo/neocomplcache.vim'
+UnBundle 'spf13/PIV'

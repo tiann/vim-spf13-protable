@@ -1,0 +1,13 @@
+" Default Bundles {
+    " Use before config if available {
+        if filereadable(expand("$VIM/.vimrc.before.fork"))
+            source $VIM/.vimrc.before.fork
+        endif
+    " }
+
+    " Use bundles config {
+        if filereadable(expand("$VIM/.vimrc.bundles"))
+            source $VIM/.vimrc.bundles
+        endif
+    " }
+" }

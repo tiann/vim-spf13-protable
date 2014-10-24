@@ -1,0 +1,15 @@
+.DS_Store
+*.pyc
+*._*
+
+/.vim/
+/.vimrc
+/.vimrc.before.fork
+/.vimrc.before
+/.vimrc.bundles
+/.vimrc.bundles.fork
+/.vimrc.fork
+.vimbackup/
+.vimundo/
+.vimswap/
+.vimviews/
