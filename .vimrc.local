@@ -23,8 +23,10 @@ let g:syntastic_python_checkers = ['pylint']
 
 let g:syntastic_check_on_open = 1
 
+set nolist
 "不启用拼写检查
 set nospell
+
 if has("gui_running")
     " set guioptions-=m  " remove menu bar
     colorscheme monokai
