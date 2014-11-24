@@ -27,6 +27,13 @@ set nolist
 "不启用拼写检查
 set nospell
 
+"" YouCompleteMe
+let g:ycm_key_list_previous_completion=['<Up>']
+
+"" Ultisnips
+let g:UltiSnipsExpandTrigger="<c-tab>"
+let g:UltiSnipsListSnippets="<c-s-tab>"
+
 if has("gui_running")
     " set guioptions-=m  " remove menu bar
     colorscheme monokai
